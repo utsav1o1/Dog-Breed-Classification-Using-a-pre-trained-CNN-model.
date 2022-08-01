@@ -1,0 +1,87 @@
+Argument 1: uploaded_images/
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+
+From pet_images/ folder printing 10 filenames
+ 1 file:              SNAKE_01.jpg
+ 2 file:                DOG_01.jpg
+ 3 file:                DOG_02.jpg
+ 4 file:              ROBOT_01.jpg
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                   SNAKE_01.jpg  label:                      snake
+ 2 key:                     DOG_01.jpg  label:                        dog
+ 3 key:                     DOG_02.jpg  label:                        dog
+ 4 key:                   ROBOT_01.jpg  label:                      robot
+{'SNAKE_01.jpg': ['snake', 'garter snake, grass snake', 1], 'DOG_01.jpg': ['dog', 'golden retriever', 0], 'DOG_02.jpg': ['dog', 'rhodesian ridgeback', 0], 'ROBOT_01.jpg': ['robot', 'scale, weighing machine', 0]}
+
+     MATCH:
+
+                  SNAKE_01.jpg: 
+Real:                      snake   Classifier:      garter snake, grass snake
+
+ NOT A MATCH:
+
+                    DOG_01.jpg: 
+Real:                        dog   Classifier:               golden retriever
+
+                    DOG_02.jpg: 
+Real:                        dog   Classifier:            rhodesian ridgeback
+
+                  ROBOT_01.jpg: 
+Real:                      robot   Classifier:        scale, weighing machine
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+     MATCH:
+
+                  SNAKE_01.jpg: 
+Real:                      snake   Classifier:      garter snake, grass snake  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    DOG_01.jpg: 
+Real:                        dog   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    DOG_02.jpg: 
+Real:                        dog   Classifier:            rhodesian ridgeback  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                  ROBOT_01.jpg: 
+Real:                      robot   Classifier:        scale, weighing machine  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+Model used: resnet
+
+Number of Images: 4 
+Number of Dog Images: 2 
+Number of "Not-a" Dog Images: 2
+pct_match: 25.0
+pct_correct_dogs: 100.0
+pct_correct_breed: 0.0
+pct_correct_notdogs: 100.0
+
+MISCLASSIFIED BREEDS: 
+ Pet Image Label?: dog 
+ Classifier Label?: golden retriever
+
+MISCLASSIFIED BREEDS: 
+ Pet Image Label?: dog 
+ Classifier Label?: rhodesian ridgeback
+
+** Total Elapsed Runtime: 0:0:0
